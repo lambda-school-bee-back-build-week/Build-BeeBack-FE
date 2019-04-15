@@ -52,6 +52,7 @@ table {
 .page-container{
     width: 1000px;
     margin: auto;
+    background-color: bisque;
 }
 
 .h1-container {
@@ -77,6 +78,7 @@ table {
     border-color: rgb(255, 166, 0);
     float: right;
     margin: 30px 40px;
+    padding: 10px;
    
 }
  nav {
@@ -89,13 +91,14 @@ table {
 
 }
 a {
-    color: rgb(114, 65, 1); 
+    color:white; 
     font-size: 18px;
     padding: 10px;
+    text-decoration: none;
   
 }
 a:hover {
-    color: rgb(70, 52, 3);
+    color: rgb(255, 189, 9);
 }
 .middle-content h2 {
     font-size: 20px;
@@ -114,4 +117,39 @@ a:hover {
 }
 .main-container p {
     align-content: center;
+}
+
+.bottom-content-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bottom-img-container {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-content-container h2 {
+    font-size: 20px;
+    font-family: lobster;
+    padding: 10px;
+    text-align: center;
+}
+
+.bottom-content-container {
+    color: rgb(114, 65, 1); 
+    font-size: 18px;
+    font-family: Raleway;
+    align-content: center;
+    padding: 20px;
+    
+}
+
+.bottom-content-text {
+    flex-direction: column; 
+    color: rgb(114, 65, 1); 
+    font-size: 18px;
+    font-family: Raleway;
+    align-content: center;
+    padding: 20px;
 }
