@@ -1,11 +1,12 @@
 import React from 'react'
+import CholorplethMap from "./choroplethmap"
 
-const main = () => {
+const Main = () => {
   return (
     <div>
-      hi
+      < CholorplethMap />
     </div>
   )
 }
 
-export default main;
+export default Main;

@@ -46,11 +46,11 @@ export const loginSuccess = (thegoods) => dispatch =>{
     
    
 }
-export const regSuccess = (thegoods) => dispatch =>{
+export const regSuccess = (goods) => dispatch =>{
     dispatch({type: REGISTER_START})
 
     return axios.post(
-        `https://beeback.herokuapp.com/api/register`, thegoods
+        `https://beeback.herokuapp.com/api/register`, goods
     )
     .then(res =>{
          console.log(res
