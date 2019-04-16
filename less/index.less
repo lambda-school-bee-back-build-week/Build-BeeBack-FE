@@ -141,10 +141,14 @@ h5 {
     font-family: 'Lobster', cursive;
 }
 
-
+body {
+  margin: 0;
+  height: 100%;
+}
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
   }
   h2 {
     font-size: 3.2rem;
@@ -187,15 +191,20 @@ h1 {
     padding: 10px;
     border-radius: 50%;
     border: 2px dashed black;
+    box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69);
   }
   a {
     text-decoration: none;
     color: black;
     font-size: 2rem;
+    font-family: 'Lobster', cursive;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   a:hover {
     color: #C7D035;
+    font-size: 2.5rem;
   }
 
   .beeIcon {
@@ -205,13 +214,19 @@ h1 {
     height: 6rem;
   }
 
+  .beeIcon:hover {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 30%;
+  }
+
   .topImg {
       width: 100%;
       height: 250px;
       margin-bottom: 110px;
       margin-top: 30px;
       border-radius: 15px;
-      box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.69);
+      box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69);
       
   }
 
@@ -219,7 +234,7 @@ h1 {
       width: 100%;
       height: 100%;
       border-radius: 15px; 
-      box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.69); 
+      box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69); 
   }
 
   .img1, .img2, .img3 {
@@ -227,7 +242,7 @@ h1 {
       height: 45%;
       margin: 20px;
       border-radius: 15px;
-      box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.69); 
+      box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69); 
   }
 
   .topContent {
@@ -266,12 +281,219 @@ h1 {
     border: 1px solid black;
     background-color: #533B0C;
     width: 100%;
-    height: 5%;
+    height: 50px;
+    font-family: 'Lobster', cursive;
+    font-size: 2.3rem;
     border-radius: 15px;
-    box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.69);
+    box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.69);
   }
 
   button:hover {
     cursor: pointer;
     color: #C7D035;
   }
+
+  body {
+    margin: 0;
+    height: 100%;
+  }
+  
+  .beecontainer {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #bee {
+    pointer-events: none;
+    position: absolute;
+    transition: .3s;
+  }
+  
+  .bee-head {
+    z-index: 10;
+    height: 15px;
+    width: 15px;
+    right: -5px;
+    top: -5px;
+    position: absolute;
+    background: black;
+  }
+  
+  .bee-tentacle {
+    height: 10px;
+    width: 2px;
+    background: black;
+    position: absolute;
+  }
+  
+  .bee-tentacle.one {
+    top: -10px;
+    left: 0;
+  }
+  
+  .bee-tentacle.two {
+    top: -15px;
+    left: 7px;
+    height: 15px;
+  }
+  
+  .bee-eye {
+    height: 2px;
+    width: 2px;
+    background: white;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+  }
+  
+  .bee-eye.one {
+    top: 5px;
+    left: 3px;
+  }
+  
+  .bee-eye.two {
+    height: 4px;
+    width: 4px;
+    top: 5px;
+    left: 8px;
+  }
+  
+  .bee-body {
+    width: 50px;
+    height: 10px;
+    background: linear-gradient(90deg, yellow 50%, black 50%);
+    background-size: 25%;
+  }
+  
+  .bee-wing {
+    margin-left: 5px;
+    height: 5px;
+    width: 25px;
+    background: #A9A9FF;
+    animation: .1s flap-wings infinite;
+  }
+  
+  .bee-stinger {
+    margin-left: -10px;
+    height: 2px;
+    width: 10px;
+    background: #757575;
+  }
+  
+  .idle-body {
+    animation: 1s idle-body infinite;
+  }
+  
+  @keyframes idle-body {
+    0% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(0, 2px);
+    }
+    20% {
+      transform: translate(0, 4px);
+    }
+    25% {
+      transform: translate(0, 6px);
+    }
+    30% {
+      transform: translate(0, 9px);
+    }
+    50% {
+      transform: translate(0, 10px);
+    }
+    60% {
+      transform: translate(0, 9px);
+    }
+    70% {
+      transform: translate(0, 6px);
+    }
+    75% {
+      transform: translate(0, 4px);
+    }
+    80% {
+      transform: translate(0, 2px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  .idle-head {
+    animation: 1s idle-head infinite;
+  }
+  
+  @keyframes idle-head {
+    0% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(0, 1px);
+    }
+    20% {
+      transform: translate(0, 2.5px);
+    }
+    25% {
+      transform: translate(0, 4px);
+    }
+    30% {
+      transform: translate(0, 5.5px);
+    }
+    50% {
+      transform: translate(0, 7px);
+    }
+    60% {
+      transform: translate(0, 5.5px);
+    }
+    70% {
+      transform: translate(0, 4px);
+    }
+    75% {
+      transform: translate(0, 2.5px);
+    }
+    80% {
+      transform: translate(0, 1px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  
+  @keyframes flap-wings {
+    0% {
+      transform: scaleY(0.5);
+    }
+    50% {
+      transform: scaleY(2.5);
+    }
+    100% {
+      transform: scaleY(0);
+    }
+  }
+
+  .teamRow {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .team1 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69); 
+  }
+
+  .teamM1 {
+    margin: 100px 100px 50px 100px;
+  }
+
+  .teamBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
