@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'
  
 // export const  FETCH_FRIENDS_START = 'FETCH_FRIENDS_START'
 // export const  FETCH_FRIENDS_SUCCESS = 'FETCH_FRIENDS_SUCCESS'
@@ -15,19 +15,23 @@ export const REGISTER_FAILURE= 'REGISTER_START'
 
 
 
+
+
+
 export const loginSuccess = (thegoods) => dispatch =>{
     dispatch({type: LOGIN_FETCHING})
 
     return axios.post(
-        `http://localhost:5000/api/login`, thegoods
+        `https://beeback.herokuapp.com/api/login`, thegoods
     )
     .then(res =>{
-         console.log(res
+         console.log(res.data.token
+
             )
-     localStorage.setItem('token', res.data.payload)
+     localStorage.setItem('token', res.data.token)
         dispatch({
             type:LOGIN_SUCCESS,
-            payload: res.data.payload, 
+            payload: res, 
             
         })
     })
@@ -41,6 +45,31 @@ export const loginSuccess = (thegoods) => dispatch =>{
     
     
    
+}
+export const regSuccess = (thegoods) => dispatch =>{
+    dispatch({type: REGISTER_START})
+
+    return axios.post(
+        `https://beeback.herokuapp.com/api/register`, thegoods
+    )
+    .then(res =>{
+         console.log(res
+
+            )
+    //  localStorage.setItem('token', res.data.token)
+        dispatch({
+            type:REGISTER_SUCCESS,
+            payload: res, 
+            
+        })
+    })
+    .catch(err =>{
+        dispatch({
+            type: REGISTER_FAILURE,
+            payload: err
+
+        })
+    })
 }
 
 

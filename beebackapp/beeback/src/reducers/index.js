@@ -16,9 +16,9 @@ import {
 
 const initialstate ={
     
-        fetchingFriends: false,
+        fetchingdata: false,
         
-        friend: [],
+        data: [],
         loggingIn: false,
         isfetching:false,
         error: null
@@ -60,14 +60,34 @@ export const rootReducer = (state = initialstate, action) =>{
              isfetching: false,
              err: 'ooops'
          }
+
+         case REGISTER_START:
+         return{
+             ...state,
+             loggingIn: false,
+             isfetching: true,
+         }
+         case REGISTER_SUCCESS:
+         return{
+             ...state,
+             loggingIn: true,
+             isfetching: false,
+         }
+         case REGISTER_FAILURE:
+         return{
+             ...state,
+             loggingIn:false,
+             isfetching: false,
+             err: 'ooops'
+         }
         //  case ADD_FRIEND:
         //  return{
         //      friend: [...state.friend, action.payload]
 
-        // //  }
+        //  }
         // case FETCH_FRIENDS_FAILURE:
-        // default:
-        //   return state;
+        default:
+          return state;
 
           
     }

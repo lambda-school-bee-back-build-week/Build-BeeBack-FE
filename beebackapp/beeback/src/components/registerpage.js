@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import {regSuccess} from '../actions/index'
 
 
  class Registerpage extends Component {
@@ -14,14 +15,14 @@ import {connect} from 'react-redux'
         e.preventDefault();
         this.setState({
             regcreds:{
-            ...this.state.creds,
+            ...this.state.regcreds,
             [e.target.name] : e.target.value
             }
         })
      }
      handleSubmit = (e) =>{
          e.preventDefault();
-        // this.props.loginSuccess(this.state.creds)
+        this.props.regSuccess(this.state.regcreds)
         
      }
 
@@ -35,7 +36,7 @@ import {connect} from 'react-redux'
         
       <div>
           <h1> Register </h1>
-          
+
         <form onSubmit ={this.handleSubmit}>
         <input onChange = {this.handlechange}
         type ="text"
@@ -76,4 +77,5 @@ import {connect} from 'react-redux'
 
 export default connect (
     mapStateToProps,
+    {regSuccess}
 )(Registerpage)

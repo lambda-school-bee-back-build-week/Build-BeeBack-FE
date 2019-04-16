@@ -25,14 +25,14 @@ import {loginSuccess} from '../actions/index'
      }
 
   render() {
-      if(this.props.isloggedin){
-        this.props.history.push("/friendlist")
-      }
+    //   if(this.props.isloggedin){
+    //     this.props.history.push("/friendlist")
+    //   }
     
-    console.log(this.props.loggedin, this.props.isfetching)
+    // console.log(this.props.loggedin, this.props.isfetching)
     return (
       <div>
-          <h1> Login Page</h1>
+          <h1> Login Page </h1>
         <form onSubmit ={this.handleSubmit}>
         <input onChange = {this.handlechange}
         type ="text"
