@@ -182,12 +182,12 @@ header {
 nav {
   margin-top: 20px;
   margin-bottom: 50px;
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-items: center;
   align-items: center;
   background-color: #533B0C;
-  padding: 10px;
+  padding: 15px;
   border-radius: 50%;
   border: 2px dashed black;
   box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
@@ -196,7 +196,7 @@ a {
   text-decoration: none;
   color: black;
   font-size: 2rem;
-  font-family: 'Lobster', cursive;
+  font-family: 'Anton', sans-serif;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -239,13 +239,19 @@ a:hover {
 }
 .img1 {
   margin-top: 30px;
+  margin-right: 70px;
 }
 .img2 {
   margin-top: 75px;
+  margin-left: 70px;
+}
+.img3 {
+  margin-top: 25px;
+  margin-right: 70px;
 }
 .topContent {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .middleContent {
   display: flex;
@@ -280,7 +286,8 @@ button {
   box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.69);
 }
 .mission {
-  margin-top: 0px;
+  margin-top: 125px;
+  margin-left: 100px;
 }
 button:hover {
   cursor: pointer;
@@ -377,7 +384,7 @@ body {
   nav {
     margin-top: 20px;
     margin-bottom: 50px;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -391,7 +398,6 @@ body {
     text-decoration: none;
     color: black;
     font-size: 1.5rem;
-    font-family: 'Lobster', cursive;
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -474,6 +480,7 @@ body {
   }
   .mission {
     margin-top: 0px;
+    margin-left: 0px;
   }
   button:hover {
     cursor: pointer;
