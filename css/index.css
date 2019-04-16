@@ -307,3 +307,179 @@ body {
   align-items: center;
   justify-items: center;
 }
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+    max-width: 400px;
+  }
+  body {
+    margin: 0;
+    padding: 5%;
+    height: 100%;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  h2 {
+    font-size: 3.2rem;
+    padding-bottom: 10px;
+  }
+  h3 {
+    font-size: 2.2rem;
+  }
+  h4 {
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+  }
+  p {
+    line-height: 1.5;
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+  }
+  header {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 50px;
+  }
+  nav {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: fixed;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: #533B0C;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px dashed black;
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Lobster', cursive;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  a:hover {
+    color: #C7D035;
+    font-size: 2.5rem;
+  }
+  .beeIcon {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 6rem;
+    height: 6rem;
+  }
+  .beeIcon:hover {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 30%;
+  }
+  .topImg {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 110px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
+    display: none;
+  }
+  .wideImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
+  }
+  .img1,
+  .img2,
+  .img3 {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
+  }
+  .topContent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .middleContent {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 30px;
+  }
+  .bottomContent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  footer {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+  }
+  .contact {
+    width: 0%;
+  }
+  .buttonBox {
+    width: 100%;
+    margin-top: -60px;
+    display: flex;
+  }
+  button {
+    border: 1px solid black;
+    background-color: #533B0C;
+    width: 100%;
+    height: 70px;
+    font-family: 'Lobster', cursive;
+    font-size: 2.3rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.69);
+  }
+  .mission {
+    margin-top: 0px;
+  }
+  button:hover {
+    cursor: pointer;
+    color: #C7D035;
+  }
+  body {
+    margin: 0;
+    height: 100%;
+  }
+  .teamRow {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  .team1 {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
+  }
+  .teamM1 {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 100px 100px 100px 100px;
+  }
+  .teamBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+}
