@@ -152,6 +152,9 @@ h2 {
   font-size: 3.2rem;
   padding-bottom: 10px;
 }
+h3 {
+  font-size: 2.2rem;
+}
 h4 {
   font-size: 2.5rem;
   padding-bottom: 10px;
@@ -287,14 +290,20 @@ body {
 .team1 {
   width: 150px;
   height: 150px;
+  margin-bottom: 20px;
   border-radius: 50%;
   box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
 }
 .teamM1 {
-  margin: 100px 100px 50px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 100px 100px 100px 100px;
 }
 .teamBox {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
 }
