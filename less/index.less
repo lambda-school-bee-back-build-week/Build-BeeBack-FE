@@ -165,7 +165,7 @@ h1 {
   }
   p {
     line-height: 1.5;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding-bottom: 10px;
   }
     
@@ -211,7 +211,6 @@ h1 {
 
   a:hover {
     color: #C7D035;
-    font-size: 2.5rem;
   }
 
   .beeIcon {
@@ -229,8 +228,8 @@ h1 {
 
   .topImg {
       width: 100%;
-      height: 250px;
-      margin-bottom: 110px;
+      height: 300px;
+      margin-bottom: 50px;
       margin-top: 30px;
       border-radius: 15px;
       box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69);
@@ -239,7 +238,7 @@ h1 {
 
   .wideImg {
       width: 100%;
-      height: 100%;
+      height: 300px;
       border-radius: 15px; 
       box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69); 
   }
@@ -285,7 +284,7 @@ h1 {
   }
 
   button{
-    border: 1px solid black;
+    border: 2px dashed black;
     background-color: #533B0C;
     width: 100%;
     height: 50px;
@@ -336,6 +335,29 @@ h1 {
     align-items: center;
     justify-items: center;
   }
+
+  .floating:hover {
+    background:  rgb(116, 83, 17);
+    cursor: pointer;
+}
+
+.floating{
+    animation-name: floating;
+    animation-duration: 1.5s;   
+    animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0%);  
+    }
+    50% {
+        transform: translateY(8%);  
+    }   
+    100% {
+        transform: translateY(0%);
+    }           
+}
   
   @media(max-width:500px) {
     .container{
@@ -407,7 +429,6 @@ h1 {
     
       a:hover {
         color: #C7D035;
-        font-size: 2.5rem;
       }
     
       .beeIcon {
@@ -418,8 +439,8 @@ h1 {
       }
     
       .beeIcon:hover {
-        width: 8rem;
-        height: 8rem;
+        width: 6rem;
+        height: 6rem;
         border-radius: 30%;
       }
     
