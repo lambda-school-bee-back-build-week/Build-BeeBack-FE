@@ -28,6 +28,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+* {
+    box-sizing: border-box;
+}
 body {
 	line-height: 1;
 }
@@ -49,10 +52,20 @@ table {
 
 /* MY CSS */
 
-.page-container{
-    width: 1000px;
+.page-container {
+    max-width: 1000px;
     margin: auto;
+}
+
+header {
     background-color: bisque;
+}
+
+p {
+    font-family: Raleway;  
+    line-height: 1.5em;
+    font-size: 1em;
+    color: rgb(114, 65, 1);
 }
 
 .h1-container {
@@ -84,7 +97,6 @@ table {
  nav {
     text-align: center;
     background-color: rgb(243, 147, 22);
-    margin: 10px;
     padding: 20px;
     font-family: Raleway;
      
@@ -105,19 +117,20 @@ a:hover {
     font-family: lobster;
     padding: 10px;
     text-align: center;
+    color: rgb(114, 65, 1); 
+    padding: 30px 10px 10px 10px; 
 }
 
 .middle-content {
-    color: rgb(114, 65, 1); 
-    font-size: 18px;
-    font-family: Raleway;
-    align-content: center;
-    padding: 20px;
+    background-color: whitesmoke;
+}
 
+.middle-content p {
+    padding: 20px;
 }
-.main-container p {
-    align-content: center;
-}
+
+
+
 
 .bottom-content-container {
     display: flex;
@@ -137,19 +150,57 @@ a:hover {
 }
 
 .bottom-content-container {
-    color: rgb(114, 65, 1); 
-    font-size: 18px;
-    font-family: Raleway;
-    align-content: center;
     padding: 20px;
-    
+    align-items: center;
+    background-color:chocolate;
 }
 
 .bottom-content-text {
     flex-direction: column; 
-    color: rgb(114, 65, 1); 
+    color: whitesmoke; 
     font-size: 18px;
     font-family: Raleway;
     align-content: center;
     padding: 20px;
+    line-height: 1.5em;
 }
+
+.bottom-content-text p {
+    color:whitesmoke;
+}
+
+.bottom-content-container img {
+    border-radius: 25%;
+}
+
+@media only screen and (max-width: 500px) {
+    body { 
+        background-color: chocolate;
+        }
+    .header-container  {
+            flex-direction: column-reverse;
+        }
+        .header-container img {
+            width: 100%; 
+            height: auto;
+            margin: 0%;
+            padding: 0%;
+        }
+        .bottom-content-container {
+            flex-direction: column;
+            align-items: center;
+            font-family: Raleway;
+        }
+        .bottom-content-text {
+            font-family: Raleway; 
+        }
+
+        p {
+            color:white; 
+            background-color: chocolate;
+        }
+       
+
+}
+
+    
