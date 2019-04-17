@@ -1,7 +1,7 @@
 import {
-    // FETCH_FRIENDS_START, 
-    // FETCH_FRIENDS_SUCCESS, 
-    // FETCH_FRIENDS_FAILURE,
+    BEE_ALL_START, 
+    BEE_ALL_SUCCESS, 
+    BEE_ALL_FAILURE,
     LOGIN_SUCCESS,
     LOGIN_FETCHING,
     LOGIN_FAILURE,
@@ -17,8 +17,7 @@ import {
 const initialstate ={
     
         fetchingdata: false,
-        
-        data: [],
+        dataAll: [],
         loggingIn: false,
         isfetching:false,
         error: null
@@ -28,19 +27,19 @@ const initialstate ={
 export const rootReducer = (state = initialstate, action) =>{
     
     switch (action.type){
-        // case FETCH_FRIENDS_START:
-        // return{
-        //   ...state,
-        //   err: '',
-        //   fetchingFriends: true
-        // }
-        // case FETCH_FRIENDS_SUCCESS:
-        // return{
-        //   ...state,
-        //   err: '',
-        //   isfetching: false,
-        //   friend: action.payload
-        // }
+        case BEE_ALL_START: 
+        return{
+          ...state,
+          err: '',
+          fetchingFriends: true
+        }
+        case BEE_ALL_SUCCESS:
+        return{
+          ...state,
+          err: '',
+          isfetching: false,
+          dataAll: action.payload
+        }
          case LOGIN_FETCHING:
          return{
              ...state,
@@ -85,7 +84,7 @@ export const rootReducer = (state = initialstate, action) =>{
         //      friend: [...state.friend, action.payload]
 
         //  }
-        // case FETCH_FRIENDS_FAILURE:
+        case BEE_ALL_FAILURE:
         default:
           return state;
 

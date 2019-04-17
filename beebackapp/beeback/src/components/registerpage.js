@@ -71,8 +71,7 @@ import {regSuccess} from '../actions/index'
   }
 }
  const mapStateToProps = state =>({
-    //   isloggedin:state.loggingIn,
-    //   isfetching:state.isfetching
+   
  })
 
 export default connect (

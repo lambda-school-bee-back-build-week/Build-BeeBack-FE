@@ -1,30 +1,36 @@
 
 import React, { Component } from 'react'
 import Plot from "react-plotly.js"
+import {getDataAll} from "../actions/index"
+import {connect} from 'react-redux'
 
 
 
 
 
  class ChoroplethMap extends Component {
+
+    componentDidMount(){
+       this.props.getDataAll() 
+
+    }
   render() {
     return (
       <div>
-        <Plot
-        data={[
-          {
-            x: [1, 2, 3],
-            y: [2, 6, 3],
-            type: 'scatter',
-            mode: 'lines+points',
-            marker: {color: 'red'},
-          },
-          {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
-        ]}
-        layout={ {width: 500, height: 500, title: 'A Fancy Plot'} }
-      />
+         <h1>hi</h1>
       </div>
     )
   }
 }
-export default ChoroplethMap
+
+const mapStateToProps = state =>{
+    console.log(state.dataAll)
+    return{
+        dataAll: state.dataAll
+    }
+}
+
+export default connect (
+    mapStateToProps,
+    {getDataAll}
+)(ChoroplethMap)
