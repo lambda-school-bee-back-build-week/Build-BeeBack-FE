@@ -141,12 +141,27 @@ p {
 
 @media only screen and (max-width: 500px) {
     .team {
-        height:200px;
-        width: 200px;
+        height:300px;
+        width: 300px;
+        margin-left: 60px;
+        
+        
+        
     }
     .team-row {
-        background-color: rgb(49, 32, 6);
+        background-color: rgb(54, 36, 8);
+        flex-direction: column;
+
     }
 
+    h3 {
+        margin-left: 4em;
+    }
+
+    p {
+        margin-left: 4em;
+
+    }
+}
 
      
