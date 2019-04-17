@@ -178,6 +178,33 @@ a:hover {
     list-style-type: disc;
 }
 
+.button {
+    font-family: lobster;
+    background-color: bisque;
+    color: rgb(243, 147, 22);
+    width: 25%; 
+    height: 50px;
+    font-size: 2rem;
+    margin-top: 50px;
+    border-radius: 25%;
+    align-items: center;
+    border: dashed; 
+    border-color: rgb(243, 147, 22);
+    text-align: center;
+    margin-bottom: 1.5em;
+
+}
+
+.button-box-class {
+    align-items: center;
+    text-align: center;
+    background-color: chocolate;
+}
+
+
+
+/* Mobile */
+
 @media only screen and (max-width: 500px) {
     body { 
         background-color: chocolate;
@@ -193,6 +220,7 @@ a:hover {
         }
         .bottom-content-container {
             flex-direction: column;
+            flex-direction: column-reverse;
             align-items: center;
             font-family: Raleway;
         }
@@ -203,6 +231,16 @@ a:hover {
         p {
             color:white; 
             background-color: chocolate;
+        }
+
+        h2 { 
+            color: rgb(114, 65, 1);
+        }
+
+        .button {
+            width: 75%;
+            height: 80px;
+            margin: 5px;
         }
        
 
