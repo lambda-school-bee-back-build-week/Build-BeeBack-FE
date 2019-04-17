@@ -233,11 +233,7 @@ a:hover {
             background-color: chocolate;
         }
 
-        h2 { 
-            color: rgb(114, 65, 1);
-        }
-
-        .button {
+       .button {
             width: 75%;
             height: 80px;
             margin: 5px;
