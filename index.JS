@@ -15,7 +15,7 @@ button.forEach(button => {
     })
 })
 
-const change = document.querySelector(".header-container");
+const change = document.querySelector("header");
 window.addEventListener('scroll', () => {
     change.style.backgroundColor = '#B49156';
 })

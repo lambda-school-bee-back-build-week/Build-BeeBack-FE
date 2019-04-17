@@ -113,6 +113,8 @@ a:hover {
     width: 300px;
     padding: 1em;
     overflow: hidden;
+    border: dashed;
+    border-color: bisque;
 }
 .team img {
     height: auto;
@@ -143,7 +145,11 @@ p {
     .team {
         height:300px;
         width: 300px;
-        margin-left: 60px;
+        border: solid;
+        border-color: bisque;
+        padding: 1em;
+        overflow: hidden;
+        
         
         
         
@@ -151,17 +157,25 @@ p {
     .team-row {
         background-color: rgb(54, 36, 8);
         flex-direction: column;
+        
 
+    }
+
+    .team-pics {
+        margin:0 auto;
     }
 
     h3 {
-        margin-left: 4em;
+        margin:0 auto;
+   padding-top: 10px;
     }
 
     p {
-        margin-left: 4em;
-
+        margin:0 auto;
+        padding-bottom: 20px;
+        
     }
-}
 
-     
+    
+
+}
