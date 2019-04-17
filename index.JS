@@ -7,6 +7,7 @@ beeImage.addEventListener('mouseover', (e) => {
 })
 console.warn(beeImage);
 
+
 const button = document.querySelectorAll(".button");
 button.forEach(button => {
     button.addEventListener('click', (e) => {
@@ -20,3 +21,18 @@ window.addEventListener('scroll', () => {
     change.style.backgroundColor = '#B49156';
 })
 console.log(change)
+
+
+
+
+// bee populations decline
+// const years = [
+//     {
+//         year: '1880',
+//         population: '10,200,000'
+//     },
+//     {
+//         year: '1930',
+//         population: '4,800,000'
+//     }
+// ];

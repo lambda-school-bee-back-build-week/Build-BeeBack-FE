@@ -3,179 +3,162 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-* {
-    box-sizing: border-box;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-    border-spacing: 0;
-}
-    
-/* MY CSS */
+ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+ }
 
-.page-container {
-    max-width: 1000px;
-    margin: auto;
+ /* HTML5 display-role reset for older browsers */
 
-}
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+     display: block;
+ }
 
-header {
-    background-color: bisque;
-}
+ * {
+     box-sizing: border-box;
+ }
 
-.header-container {
-    display: flex;
-    justify-content: center;
-   
-}
+ body {
+     line-height: 1;
+ }
 
-h1 {
-    font-family: lobster;
-    color: rgb(255, 166, 0);
-    font-family: lobster, cursive;
-    font-size: 100px;
-    text-align: center;
-    padding: 40px;
-}
+ ol, ul {
+     list-style: none;
+ }
 
-nav {
-    text-align: center;
-    background-color: rgb(243, 147, 22);
-    padding: 20px;
-    font-family: Raleway;
-}
+ blockquote, q {
+     quotes: none;
+ }
 
-a {
-    color:white; 
-    font-size: 18px;
-    padding: 10px;
-    text-decoration: none;
-}
+ blockquote:before, blockquote:after, q:before, q:after {
+     content: '';
+     content: none;
+ }
 
-a:hover {
-    color: rgb(255, 189, 9);
-}
+ table {
+     border-collapse: collapse;
+     border-spacing: 0;
+ }
 
-.team-row {
-    display: flex;
-    background-color: rgb(189, 105, 3);
-    padding: 30px 0;
-}
+ /* MY CSS */
 
-.team-pics {
-    width: 50%;
-    height:50%;
-    text-align: center;
-}
+ .page-container {
+     max-width: 1000px;
+     margin: auto;
+ }
 
-.team {
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-    padding: 1em;
-    overflow: hidden;
-    border: dashed;
-    border-color: bisque;
-}
-.team img {
-    height: auto;
-    width: 300px;
-}
+ header {
+     background-color: bisque;
+ }
 
-h3 {
-    font-family: lobster;
-    color: white;
-    text-align: center;
-    font-size: 22px;
-    align-items: center;
-}
-p {
-    font-family: Raleway;
-    color: bisque;
-    text-align: center;
-    font-size: 16px; 
-}
+ .header-container {
+     display: flex;
+     justify-content: center;
+ }
 
-.text-container {
-    text-align: center;
-}
+ h1 {
+     font-family: lobster;
+     color: rgb(255, 166, 0);
+     font-family: lobster, cursive;
+     font-size: 100px;
+     text-align: center;
+     padding: 40px;
+ }
 
-/* MOBILE */
+ nav {
+     text-align: center;
+     background-color: rgb(243, 147, 22);
+     padding: 20px;
+     font-family: Raleway;
+ }
 
-@media only screen and (max-width: 500px) {
-    .team {
-        height:300px;
-        width: 300px;
-        border: solid;
-        border-color: bisque;
-        padding: 1em;
-        overflow: hidden;
-        
-        
-        
-        
-    }
-    .team-row {
-        background-color: rgb(54, 36, 8);
-        flex-direction: column;
-        
+ a {
+     color: white;
+     font-size: 18px;
+     padding: 10px;
+     text-decoration: none;
+ }
 
-    }
+ a:hover {
+     color: rgb(255, 189, 9);
+ }
 
-    .team-pics {
-        margin:0 auto;
-    }
+ .team-row {
+     display: flex;
+     background-color: rgb(189, 105, 3);
+     padding: 30px 0;
+ }
 
-    h3 {
-        margin:0 auto;
-   padding-top: 10px;
-    }
+ .team-pics {
+     width: 50%;
+     height: 50%;
+     text-align: center;
+ }
 
-    p {
-        margin:0 auto;
-        padding-bottom: 20px;
-        
-    }
+ .team {
+     border-radius: 50%;
+     height: 300px;
+     width: 300px;
+     padding: 1em;
+     overflow: hidden;
+     border: dashed;
+     border-color: bisque;
+ }
 
-    
+ .team img {
+     height: auto;
+     width: 300px;
+ }
 
-}
+ h3 {
+     font-family: lobster;
+     color: white;
+     text-align: center;
+     font-size: 22px;
+     align-items: center;
+ }
+
+ p {
+     font-family: Raleway;
+     color: bisque;
+     text-align: center;
+     font-size: 16px;
+ }
+
+ .text-container {
+     text-align: center;
+ }
+
+ /* MOBILE */
+
+ @media only screen and (max-width: 500px) {
+     .team {
+         height: 300px;
+         width: 300px;
+         border: solid;
+         border-color: bisque;
+         padding: 1em;
+         overflow: hidden;
+     }
+     .team-row {
+         background-color: rgb(54, 36, 8);
+         flex-direction: column;
+     }
+     .team-pics {
+         margin: 0 auto;
+         width: 100%; 
+     }
+     h3 {
+         margin: 0 auto;
+         padding-top: 10px;
+     }
+     p {
+         margin: 0 auto;
+         padding-bottom: 20px;
+     }
+ }
+ 
