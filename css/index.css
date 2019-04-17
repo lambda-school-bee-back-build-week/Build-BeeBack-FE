@@ -86,7 +86,6 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -144,6 +143,13 @@ body {
   margin: 0;
   height: 100%;
 }
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -163,13 +169,6 @@ p {
   line-height: 1.5;
   font-size: 1.4rem;
   padding-bottom: 10px;
-}
-.container {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
 }
 header {
   width: 100%;
@@ -327,6 +326,10 @@ body {
   align-items: center;
   justify-items: center;
 }
+.teambtn {
+  width: 125px;
+  height: 50px;
+}
 .floating:hover {
   background: #745311;
   cursor: pointer;
@@ -347,73 +350,50 @@ body {
     transform: translateY(0%);
   }
 }
+.floating2:hover {
+  background: #745311;
+  cursor: pointer;
+}
+.floating2 {
+  animation-name: floating2;
+  animation-delay: 0.75s;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes floating2 {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 @media (max-width: 500px) {
   .container {
     width: 90%;
     max-width: 400px;
+    margin-top: 40px;
   }
   body {
-    margin: 0;
     padding: 5%;
-    height: 100%;
   }
   h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
     margin-top: 20px;
-  }
-  h2 {
-    font-size: 3.2rem;
-    padding-bottom: 10px;
-  }
-  h3 {
-    font-size: 2.2rem;
-  }
-  h4 {
-    font-size: 2.5rem;
-    padding-bottom: 10px;
   }
   p {
-    line-height: 1.5;
     font-size: 1.6rem;
-    padding-bottom: 10px;
-  }
-  header {
-    width: 100%;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-bottom: 50px;
   }
   nav {
-    margin-top: 20px;
-    margin-bottom: 50px;
-    position: absolute;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    background-color: #533B0C;
     padding: 10px;
-    border-radius: 50%;
-    border: 2px dashed black;
-    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
   }
   a {
-    text-decoration: none;
-    color: black;
     font-size: 1.5rem;
     margin-left: 5px;
     margin-right: 5px;
-  }
-  a:hover {
-    color: #C7D035;
-  }
-  .beeIcon {
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 6rem;
-    height: 6rem;
   }
   .beeIcon:hover {
     width: 6rem;
@@ -421,19 +401,12 @@ body {
     border-radius: 30%;
   }
   .topImg {
-    width: 100%;
     height: 250px;
     margin-bottom: 110px;
-    margin-top: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
     display: none;
   }
   .wideImg {
-    width: 100%;
     height: 100%;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
   }
   .img1,
   .img2,
@@ -442,84 +415,39 @@ body {
     width: 100%;
     height: 100%;
     margin: 0px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
   }
   .topContent {
-    display: flex;
     flex-direction: column;
     margin-bottom: 30px;
   }
   .middleContent {
-    display: flex;
     flex-direction: column-reverse;
-    margin-bottom: 30px;
   }
   .bottomContent {
-    display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
-  }
-  footer {
-    width: 100%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    display: flex;
   }
   .contact {
     width: 0%;
   }
   .buttonBox {
     width: 100%;
-    margin-top: -60px;
-    display: flex;
   }
   button {
-    border: 1px solid black;
-    background-color: #533B0C;
-    width: 100%;
+    border: 2px dashed black;
     height: 70px;
-    font-family: 'Lobster', cursive;
-    font-size: 2.3rem;
-    border-radius: 15px;
-    box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.69);
   }
   .mission {
     margin-top: 0px;
     margin-left: 0px;
   }
-  button:hover {
-    cursor: pointer;
-    color: #C7D035;
-  }
-  body {
-    margin: 0;
-    height: 100%;
-  }
   .teamRow {
-    display: flex;
     flex-direction: column;
-    justify-items: center;
-    align-items: center;
-  }
-  .team1 {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.69);
   }
   .teamM1 {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    margin: 100px 100px 100px 100px;
+    margin: 50px 0px 50px 0px;
   }
-  .teamBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
+  .teambtn {
+    width: 100px;
+    height: 50px;
   }
 }
