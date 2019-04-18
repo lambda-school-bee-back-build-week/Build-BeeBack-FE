@@ -1,0 +1,144 @@
+
+// CENTER NAV BAR //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+header {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 25px;
+}
+
+nav {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: absolute;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 50%;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-family: 'Anton', sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+  a:hover {
+    color: @buttonText;
+  }
+
+.beeIcon {
+    margin-left: 0px;
+    margin-right: 5px;
+    width: 6rem;
+    height: 6rem;
+}
+
+
+// BEE INFO ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.dropdown {
+    z-index: 999;
+    position: absolute;
+    left: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .dropdown .dropdown-button {
+    margin-top: 0px;  
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    z-index: 999;
+    padding: 15px;
+    border: 2px solid #000000;
+    border-top: none;
+    background:  @buttonBack;
+    color: @buttonText;
+    font-size: 16px;
+    font-family: 'Anton', sans-serif;
+    box-shadow: 0px 0px 10px 7px @shadow; 
+  }
+
+  .dropdown-button {
+      width: 130px;
+      height: 50px;
+      text-align: center;
+  }
+
+  .dropdown .dropdown-button:hover {
+    z-index: 999;
+    color: #C7D035;    
+    background-color: @buttonBack;
+  }
+  .dropdown .dropdown-content {
+    z-index: -999;
+    top: -350px;
+    width: 100%;
+    position: absolute;
+    color: @buttonText;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .dropdown .dropdown-link {
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000000;
+  }
+  .dropdown .dropdown-link:hover {
+    color: @buttonText;
+    background-color: @buttonBack;
+  }
+
+
+  // PHONE SCALE ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  @media(max-width:500px) {
+
+    header {
+        margin-bottom: 70px;
+    }
+
+    nav {
+        padding: 10px;
+      }
+    
+      a {
+        font-size: 1.5rem; 
+        margin-left: 5px;
+        margin-right: 5px;
+      }  
+
+      .dropdown-button {
+        display: none;
+      }
+
+  }
+ 
+
+  // TABLET SCALE ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  @media(max-width:800px) {
+
+    .dropdown {
+        display: none;
+    }
+
+  }

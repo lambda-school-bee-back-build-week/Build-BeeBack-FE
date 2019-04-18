@@ -1,0 +1,153 @@
+
+// MAIN CONTENT ////////////////////////////////////////////////////////////////////////////////////////////
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+form {
+  height: 60px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 3.2rem;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+}
+
+.topContent {
+    display: flex;
+    margin-bottom: 10px;  
+}
+
+.middleContent {
+    display: flex;
+    margin-bottom: 30px;   
+}
+  
+.bottomContent {
+    display: flex;
+    margin-bottom: 30px;   
+}
+
+// TEAM PAGE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.teamRow {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.teamM1 {display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 100px 100px 100px 100px;
+}
+
+.teamBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+
+// FOOTER /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.contact {
+    width: 60%;
+}
+
+footer {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+
+// PHONE SCALE /////////////////////////////////////////////////////////////////////////////////////////////
+
+@media(max-width:500px) {
+
+    .container{
+        width: 90%;
+        max-width: 400px;
+        margin-top: 40px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    
+      .topContent {
+        flex-direction: column;
+        margin-bottom: 30px; 
+      }
+    
+      .middleContent {
+        flex-direction: column-reverse;  
+      }
+      
+      .bottomContent {
+        flex-direction: column;  
+      }
+
+      .contact {
+        width: 0%;
+      }
+
+      .teamRow {
+        flex-direction: column;
+      }
+
+      .teamM1 {
+      margin: 50px 0px 50px 0px;
+      }
+
+}
+
+
+// TABLET SCALE ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media(max-width:800px) {
+    
+    .solutions {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .contact {
+        width: 0%;
+      }
+
+}
