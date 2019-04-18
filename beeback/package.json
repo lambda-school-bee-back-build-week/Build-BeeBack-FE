@@ -3,18 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD:beeback/package.json
     "axios": "^0.18.0",
-=======
->>>>>>> r1remote/master:beeback/package.json
     "plotly.js": "^1.47.2",
     "plotly.js-geo-dist": "^1.47.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-<<<<<<< HEAD:beeback/package.json
-=======
     "react-loader-spinner": "^2.3.0",
->>>>>>> r1remote/master:beeback/package.json
     "react-plotly.js": "^2.3.0",
     "react-plotlyjs": "^0.4.4",
     "react-redux": "^7.0.2",

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {chartingData} from "../actions/index"
+// import {chartingData} from "../actions/index"
 import {connect} from 'react-redux'
 import createPlotlyComponent from 'react-plotlyjs';
 // import Plotly from 'plotly.js-geo-dist';
@@ -56,5 +56,5 @@ const mapStateToProps = state =>{
 }
 export default connect (
     mapStateToProps,
-    {chartingData}
+    // {chartingData}
 )(lineplot)
