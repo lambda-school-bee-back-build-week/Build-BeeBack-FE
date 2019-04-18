@@ -186,6 +186,11 @@
      margin-bottom: 1.5em;
  }
 
+ .button:hover {
+     opacity: .85;
+     cursor: pointer;
+ }
+
  .button:focus {
      outline: none;
  }
