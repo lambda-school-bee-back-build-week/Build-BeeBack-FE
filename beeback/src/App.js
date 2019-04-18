@@ -5,6 +5,7 @@ import Loginpage from "./components/loginpage"
 import Registerpage from "./components/registerpage"
 import Main from "./components/main"
 import PrivateRoute from './components/privateroute'
+import UpdateAccount from './components/updateAccount'
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <Link  to = "/"> Login</Link>
           <Link to = '/registerpage'> Register </Link>
           <Link to = "/main"> Main </Link>
+          <Link to = '/update'>Edit Profile</Link>
 
         </nav>
         </div>
@@ -22,6 +24,7 @@ class App extends Component {
       <Route   exact path = "/" component = {Loginpage}/>
       <Route path = "/registerpage" component = {Registerpage}/>
       <PrivateRoute path = '/main'   component ={Main}/>
+      <PrivateRoute path = '/update' component ={UpdateAccount}/>
 
         
       </div>

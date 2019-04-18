@@ -11,7 +11,12 @@ import {
     CHARTDATA_START,
     CHARTDATA_SUCCESS,
    CHARTDATA_END,
-   
+   UPDATE_START,
+   UPDATE_SUCCESS,
+   UPDATE_FAILURE,
+   DELETE_START,
+   DELETE_SUCCESS,
+   DELETE_FAILURE
 
     
 
@@ -25,13 +30,58 @@ const initialstate ={
         data:[],
         loggingIn: false,
         isfetching:false,
-        error: null
+        error: null,
+        isupdated:false,
+        isdeleted:false,
       
 };
 
 export const rootReducer = (state = initialstate, action) =>{
     
     switch (action.type){
+        case UPDATE_START:
+        return{
+            ...state,
+            fetchingdata:true
+            
+            
+
+        }
+        case UPDATE_SUCCESS:
+        return{
+            ...state,
+            fetchingdata: false,
+            isupdated: true
+            
+        }
+        case UPDATE_FAILURE:
+        return{
+            ...state,
+            fetchingdata: false,
+            isupdated: false
+            
+        }
+        case DELETE_START:
+        return{
+            ...state,
+            fetchingdata:true,
+            isdeleted:false
+            
+        }
+        case DELETE_SUCCESS:
+        return{
+            ...state,
+            fetchingdata:false,
+            isdeleted:true
+            
+        }
+        case DELETE_FAILURE:
+        return{
+            ...state,
+            fetchingdata:false,
+            isdeleted:false
+            
+        }
         case CHARTDATA_START:
         return{
             ...state,
