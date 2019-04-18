@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {regSuccess} from '../actions/index'
+import {Update , Delete} from '../actions/index'
 
 
- class Registerpage extends Component {
+ class updateAccount extends Component {
      state = {
-         regcreds:{
+         updatecreds:{
          username: '',
          password: '',
          email: '',
@@ -22,7 +22,7 @@ import {regSuccess} from '../actions/index'
      }
      handleSubmit = (e) =>{
          e.preventDefault();
-        this.props.regSuccess(this.state.regcreds)
+        this.props.Update(this.state.updatecreds)
         
      }
 
@@ -66,15 +66,19 @@ import {regSuccess} from '../actions/index'
         
 
         </form>
+
+        <div>
+            <button onClick ={ () => this.props.Delete()}> Delete Account </button>
+        </div>
       </div>
     )
   }
-}
- const mapStateToProps = state =>({
+} 
+const mapStateToProps = state =>({
    
- })
+})
 
 export default connect (
-    mapStateToProps,
-    {regSuccess}
-)(Registerpage)
+   mapStateToProps,
+   {Update, Delete}
+)(updateAccount)

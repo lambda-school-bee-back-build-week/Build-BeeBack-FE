@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {loginSuccess} from '../actions/index'
 
+
  class Loginpage extends Component {
      state = {
          creds:{
@@ -31,7 +32,11 @@ import {loginSuccess} from '../actions/index'
     
     // console.log(this.props.loggedin, this.props.isfetching)
     return (
+        
       <div>
+          
+
+
           <h1> Login Page </h1>
         <form onSubmit ={this.handleSubmit}>
         <input onChange = {this.handlechange}
