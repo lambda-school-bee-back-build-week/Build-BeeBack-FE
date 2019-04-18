@@ -3,99 +3,116 @@
 <html lang="en">
 
     <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
 
-    <title>We'll Be Back</title>
-   
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
-   
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+
+        <title>We'll Be Back</title>
+    
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
     </head>
-
+   
     <body>
-        <header id="test">
+
         
-            <nav>
-                    <a href="mission.html">MISSION</a> 
-                    <a href="index.html"><img href="index.html" class="beeIcon" src="images/beeIcon.jpg" alt=""></a> 
-                    <a href="team.html">TEAM</a>
+
+        <header id="test">
+
+            <div class="dropdown">
+                <div class="dropdown-button">Bee Info</div>
+                <div class="dropdown-content dropdown-hidden">
+                    <a class="dropdown-link" href="http://mentalfloss.com/article/53691/13-fascinating-facts-about-bees/" target="_blank">Bee Facts</a>
+                    <a class="dropdown-link" href="https://en.wikipedia.org/wiki/Honey_bee" target="_blank">Wiki</a>
+                    <a class="dropdown-link" href="https://www.epa.gov/pollinator-protection" target="_blank">EPA</a>
+                    <a class="dropdown-link" href="https://www.panna.org/our-campaigns/save-our-bees" target="_blank">Save Our Bees</a>
+                    <a class="dropdown-link" href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank">Lets Roll</a>
+                </div>
+            </div>
+
+            <nav> 
+                <a href="mission.html">MISSION</a> 
+                <a href="index.html"><img href="index.html" class="beeIcon" src="images/beeIcon.jpg" alt=""></a> 
+                <a href="team.html">TEAM</a>
             </nav>
 
         </header>
 
         
 
-    <div class="container">
+        <div class="container">
+            
+            <section class="topImg">
+                    <img class="wideImg" src="images/beeWide.jpg" alt="">
+            </section>
         
-        <section class="topImg">
-                <img class="wideImg" src="images/beeWide.jpg" alt="">
-        </section>
-        
+            <section class="topContent">
+                    <img class="img1" src="images/beeYellowFlower.jpg" alt="">
+                <div>
+                    <h1>Are Bees Important?</h1>
+                        <p>Many domestic and imported fruits and vegetables require pollination.
+                            Examples include avocados, soybeans, asparagus, broccoli, celery, squash, and 
+                            sunflowers for oil, cucumbers, citrus fruit, peaches, kiwis, cherries, cranberries 
+                            and melons. For crops such as blueberries and almonds, the honey bee plays 
+                            an essential role in pollination of commercial crops,  with around 80% of the 
+                            US crop said to be dependent on honey bees. Honey bees can also pollinate clover
+                            and alfalfa, which are fed to cattle, so there are implications for the meat and 
+                            dairy industry too. And that is not to mention the huge range of manufactured food
+                            products made from all these ingredients.</p>
+                </div>
+            </section>
 
-        <section class="topContent">
-            <img class="img1" src="images/beeYellowFlower.jpg" alt="">
-            <div>
-                <h1>Are Bees Important?</h1>
-                    <p>Many domestic and imported fruits and vegetables require pollination.
-                         Examples include avocados, soybeans, asparagus, broccoli, celery, squash, and 
-                         sunflowers for oil, cucumbers, citrus fruit, peaches, kiwis, cherries, cranberries 
-                         and melons. For crops such as blueberries and almonds, the honey bee plays 
-                         an essential role in pollination of commercial crops,  with around 80% of the 
-                         US crop said to be dependent on honey bees. Honey bees can also pollinate clover
-                          and alfalfa, which are fed to cattle, so there are implications for the meat and 
-                          dairy industry too. And that is not to mention the huge range of manufactured food
-                           products made from all these ingredients.</p>
-            </div>
-        </section>
-
-        <section class="middleContent">
-            <div>
-                <h1>Bees and the economy</h1>
-                    <p>In 2008, the British Bee Keepers Association estimates that honey bees make a significant contribution
-                         to the £165 million annually generated for the UK economy through pollination by insects, with the
-                          figure put at £200 million in 2009 by the UK’s Public Accounts Committee. Many flowering food crops 
-                          in the UK rely on honey bees for this service, for example: apples, pears, field beans, runner and 
-                          dwarf beans, broad beans, strawberries, blueberries, raspberries, blackberries and rape seed oil, 
-                           with 39 commercial crops reliant on bees in total. Even if a crop is not directly pollinated by
+            <section class="middleContent">
+                <div>
+                    <h1>Bees and the economy</h1>
+                        <p>In 2008, the British Bee Keepers Association estimates that honey bees make a significant contribution
+                            to the £165 million annually generated for the UK economy through pollination by insects, with the
+                            figure put at £200 million in 2009 by the UK’s Public Accounts Committee. Many flowering food crops 
+                            in the UK rely on honey bees for this service, for example: apples, pears, field beans, runner and 
+                            dwarf beans, broad beans, strawberries, blueberries, raspberries, blackberries and rape seed oil, 
+                            with 39 commercial crops reliant on bees in total. Even if a crop is not directly pollinated by
                             a honey bee, the crop still benefits indirectly from being in an environment in which honey bees 
                             are working, due to the increased biodiversity in the area which stimulates the crop.</p>        
-            </div>
-            <img class="img2" src="images/honeyfruit.jpg" alt="">
-        </section>
+                </div>
+                    <img class="img2" src="images/honeyfruit.jpg" alt="">
+            </section>
 
-        <section class="bottomContent">
-            <img class="img3" src="images/bumblebee.jpg" alt="">
-            <div>
-                <h1>The humble bumble</h1>
-                    <p>The bumble bee is also used commercially in the UK as a pollinator of food crops,
-                         in particular for tomatoes and soft fruits such as strawberries. Due to their size, 
-                         shape and ability to vibrate vigorously they are more effective at pollinating certain crops.
-                          In the UK we have 25 native species of bumble bee. This may seem like a healthy number
-                           but unfortunately three species are already extinct, two are critically endangered and
+            <section class="bottomContent">
+                    <img class="img3" src="images/bumblebee.jpg" alt="">
+                <div>
+                    <h1>The humble bumble</h1>
+                        <p>The bumble bee is also used commercially in the UK as a pollinator of food crops,
+                            in particular for tomatoes and soft fruits such as strawberries. Due to their size, 
+                            shape and ability to vibrate vigorously they are more effective at pollinating certain crops.
+                            In the UK we have 25 native species of bumble bee. This may seem like a healthy number
+                            but unfortunately three species are already extinct, two are critically endangered and
                             many more are seriously declining in numbers. <br><br> Click the button below to check 
-                         the health of the bee populations in your area. </p>
-            </div>
-        </section>
+                            the health of the bee populations in your area. </p>
+                </div>
+            </section>
 
-        <footer>
-            <div class="contact">
-                
-            </div>
-            <div class="buttonBox">
-                <button class="floating">Check The Map</button>
-            </div>
-        </footer>
-     
-       
+            <footer>
 
-    </div> <!-- container -->
+                    <div class="contact"></div>
+
+                <div class="buttonBox">
+                    <button class="floating">Check The Map</button>
+                </div>
+
+            </footer>     
+
+        </div> <!-- container -->
 
     </body>
-            <div align="center" style="z-index:9;visibility:visible;"></div>
-            <style>HTML,BODY{cursor: url("http://downloads.totallyfreecursors.com/cursor_files/bumblebee.ani"),
+
+        <div align="center" style="z-index:9;visibility:visible;"></div>
+        <style>HTML,BODY{cursor: url("http://downloads.totallyfreecursors.com/cursor_files/bumblebee.ani"),
              url("http://downloads.totallyfreecursors.com/thumbnails/bumblebee.gif"), auto;}</style>
-            <script src="js/index.js"></script>
+
+        <script src="js/index.js"></script>
 
 </html>

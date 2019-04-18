@@ -1,25 +1,62 @@
+const beeIcon = document.querySelector(".beeIcon");
+const buttonLight = document.querySelector("button");
+const ddButtonLight = document.querySelector(".dropdown-button");
+
+// BEE ICON GROW ON HOVER //////////////////////////////////////////////////////////////////////////////////////////////
+beeIcon.addEventListener("mouseover", function( event ) {   
+    event.target.style.width = "8rem";
+    event.target.style.height = "8rem";
+  setTimeout(function() {
+      event.target.style.width = "";
+      event.target.style.height = "";
+      }, 500);
+    }, false);
 
 
-  window.addEventListener('scroll', function() {
-    var currScrollPos2 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (currScrollPos2 > 10) {
-      document.getElementById('test').style.opacity = -currScrollPos2 / 400 + 7;
-    }
-  }
-);
+// BACKGROUND "LIGHT" FOR BUTTON //////////////////////////////////////////////////////////////////////////////////////
+buttonLight.addEventListener("mouseenter", function( event ) {   
 
-window.addEventListener('scroll', function() {
-    var currScrollPos2 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (currScrollPos2 > 10) {
-      document.getElementById('test2').style.opacity = -currScrollPos2 / 400 + 9.5;
-    }
-  }
-);
+    event.target.style.background = "rgb(116, 83, 17)";
+    event.target.style.color = "#C7D035";
+  setTimeout(function() {
+    event.target.style.background = "rgb(116, 83, 17)";
+    event.target.style.color = "black";
+      
+      }, 3000);
+    }, false);
 
-window.addEventListener('scroll', function() {
-    var currScrollPos2 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (currScrollPos2 > 10) {
-      document.getElementById('test3').style.opacity = -currScrollPos2 / 400 + 5.5;
-    }
-  }
-);
+    ddButtonLight.addEventListener("click", function( event ) {   
+        event.target.style.background = "rgb(116, 83, 17)";
+        event.target.style.color = "#C7D035";
+    setTimeout(function() {
+        event.target.style.background = "rgb(116, 83, 17)";
+        event.target.style.color = "black";
+        }, 3000);
+      }, false);
+  
+// BEE FACTS DROP DOWN ///////////////////////////////////////////////////////////////////////////////////////////////    
+class Dropdown {
+        constructor(element) {
+          this.element = element;
+          this.button = this.element.querySelector('.dropdown-button');          
+          this.content = this.element.querySelector('.dropdown-content');
+          this.button.addEventListener('click', () => this.toggleContent());
+        }
+      
+toggleContent() {
+        this.content.classList.toggle('dropdown-hidden');
+    const drop = document.querySelector('.dropdown-content');
+          if (this.content.classList.contains('dropdown-hidden')) {
+            TweenMax.to(drop, 2, {top: -400})
+          } else {
+            TweenMax.to(drop, 2, {top: 85})
+          };
+      
+        }
+      }
+
+let dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));
+
+
+
+
