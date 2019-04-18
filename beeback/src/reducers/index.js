@@ -7,7 +7,11 @@ import {
     LOGIN_FAILURE,
     REGISTER_START,
     REGISTER_SUCCESS,
-    REGISTER_FAILURE
+    REGISTER_FAILURE,
+    CHARTDATA_START,
+    CHARTDATA_SUCCESS,
+   CHARTDATA_END,
+   
 
     
 
@@ -18,6 +22,7 @@ const initialstate ={
     
         fetchingdata: false,
         dataAll: [],
+        data:[],
         loggingIn: false,
         isfetching:false,
         error: null
@@ -27,6 +32,25 @@ const initialstate ={
 export const rootReducer = (state = initialstate, action) =>{
     
     switch (action.type){
+        case CHARTDATA_START:
+        return{
+            ...state,
+            err: '',
+            fetchingdata: true 
+        }
+        case CHARTDATA_SUCCESS:
+        return{
+            ...state,
+            err: '',
+            fetchingdata:false,
+            data:action.payload
+        }
+        case CHARTDATA_END:
+        return{
+            ...state,
+            err: 'oops',
+            fetchingdata:false
+        }
         case BEE_ALL_START: 
         return{
           ...state,

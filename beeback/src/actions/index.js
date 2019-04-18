@@ -9,6 +9,10 @@ export const LOGIN_FAILURE = 'LOGIN_FAILURE'
 export const REGISTER_START = 'REGISTER_START'
 export const REGISTER_SUCCESS = 'REGISTER_SUCESS'
 export const REGISTER_FAILURE= 'REGISTER_START'
+export const CHARTDATA_START = 'CHARTDATA_START'
+export const CHARTDATA_SUCCESS = 'CHARTDATA_SUCCESS'
+export const CHARTDATA_END = 'CHARTDATA_END'
+
 
 
 
@@ -93,4 +97,25 @@ export const getDataAll = (bee) => dispatch => {
         })
     })
     
+}
+
+export const chartingData = () => dispatch =>{
+        dispatch({ type : CHARTDATA_START})
+    axios.get(`https://beeback.herokuapp.com/api/state-charting`,
+    {headers: {authorization:localStorage.getItem('token')}})
+
+    .then(res => {
+        console.log(res.data)
+        dispatch({
+            type: CHARTDATA_SUCCESS,
+            payload: res.data
+        })
+    })
+    .catch(err =>{
+        dispatch({
+            type: CHARTDATA_END,
+            payload:err
+        })
+    })
+        
 }
