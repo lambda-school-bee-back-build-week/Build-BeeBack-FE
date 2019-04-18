@@ -196,6 +196,42 @@
      background-color: chocolate;
  }
 
+ .list-container {
+     background-color: bisque;
+     display: flex;
+     padding: 15px;
+ }
+
+ .list-container h2 {
+    font-size: 20px;
+    font-family: lobster;
+    padding: 10px;
+    color: rgb(114, 65, 1);
+    text-align: center;
+    
+
+ }
+
+ .list-container img {
+    border-radius: 25%;
+    margin: 10px;
+    
+
+ }
+
+ .plant-style {
+    font-family: Raleway;
+    line-height: 1.5em;
+    font-size: 1em;
+    color: rgb(114, 65, 1);
+    padding-bottom: 20px;
+    padding-left: 20px;
+    justify-content: center;
+    margin: 5px;
+    text-align: left;
+
+ }
+
  /* Mobile */
 
  @media only screen and (max-width: 500px) {
@@ -229,4 +265,34 @@
          height: 80px;
          margin: 5px;
      }
+
+     .list-container {
+        flex-direction: column;
+
+     }
+     .plant-style li {
+        margin-bottom: 10px;
+        
+     }
  }
+
+ /*Tablet */
+
+ @media only screen and (max-width: 800px) {
+    .middle-content {
+        background-color: bisque;
+    }
+    .list-container {
+        flex-direction: column-reverse;
+        align-content: center;
+        align-items: center;
+    }
+
+    .list-container img {
+        width: 600px;
+    }
+
+    .plant-style {
+        font-size: 18px;
+    }
+}

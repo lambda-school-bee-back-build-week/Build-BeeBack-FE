@@ -145,7 +145,7 @@
          overflow: hidden;
      }
      .team-row {
-         background-color: rgb(54, 36, 8);
+         background-color: rgb(59, 45, 22);
          flex-direction: column;
      }
      .team-pics {
@@ -161,4 +161,14 @@
          padding-bottom: 20px;
      }
  }
- 
+
+ /*Tablet*/
+
+ @media only screen and (min-width: 800px) {
+    .team-row {
+        background-color: rgb(148, 104, 23);
+    }
+
+
+}
+
