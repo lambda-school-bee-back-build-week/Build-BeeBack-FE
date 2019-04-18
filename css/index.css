@@ -358,6 +358,11 @@ a:hover {
     display: none;
   }
 }
+@media (max-width: 800px) {
+  .dropdown {
+    display: none;
+  }
+}
 .buttonBox {
   width: 30%;
   margin-top: -60px;
