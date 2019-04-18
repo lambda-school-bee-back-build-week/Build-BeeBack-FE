@@ -47,7 +47,9 @@ table {
 
 html {
   font-size: 62.5%;
-  background: linear-gradient(to bottom, #533B0C 0%, #CB8C07 88%, #C7D035 100%);
+//   background: linear-gradient(to bottom, #533B0C 0%, #CB8C07 88%, #C7D035 100%);
+background-color: #44300a;
+background-image: linear-gradient(180deg, #44300a 4%, #513e0a 24%, #806114 48%, #a58523 85%, #d0ba6a 100%);
 }
 
 html, body {
@@ -59,373 +61,38 @@ h1, h2, h3, h4, h5 {
 }
 
 body {
-  margin: 0;
-  height: 100%;
-}
-   
-.container {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 3.2rem;
-    padding-bottom: 10px;
-}
-
-h3 {
-    font-size: 2.2rem;
-}
-
-h4 {
-    font-size: 2.5rem;
-    padding-bottom: 10px;
-}
-
-p {
-    line-height: 1.5;
-    font-size: 1.4rem;
-    padding-bottom: 10px;
-}
-
-header {
-    width: 100%;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-bottom: 25px;
-}
-
-nav {
-    margin-top: 20px;
-    margin-bottom: 50px;
-    position: absolute;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    background-color: #533B0C;
-    padding: 15px;
-    border-radius: 50%;
-    border: 2px dashed black;
-    box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69);
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-size: 2rem;
-    font-family: 'Anton', sans-serif;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-  a:hover {
-    color: #C7D035;
-  }
-
-.beeIcon {
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 6rem;
-    height: 6rem;
-}
-
-.beeIcon:hover {
-    width: 8rem;
-    height: 8rem;
-    border-radius: 30%;
-}
-
-.topImg {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 50px;
-    margin-top: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69);
-      
-  }
-
-.wideImg {
-    width: 100%;
-    height: 300px;
-    border-radius: 15px; 
-    box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69); 
-}
-
-
-.img1, .img2, .img3, .img4 {
-    width: 45%;
-    height: 300px;
-    margin: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69); 
-}
-
-.img1 {
-    margin-top: 30px;
-    margin-right: 70px;
-}
-
-.img2 {
-    margin-top: 75px;
-    margin-left: 70px;
-}
-
-.img3 {
-    margin-top: 25px;
-    margin-right: 70px;
-}
-
-.img4 {
-    margin-top: 50px;
-    margin-right: 40px;
-}
-
-.topContent {
-    display: flex;
-    margin-bottom: 10px; 
-}
-
-.middleContent {
-    display: flex;
-    margin-bottom: 30px;   
-}
-  
-.bottomContent {
-    display: flex;
-    margin-bottom: 30px;   
-}
-
-footer {
-    width: 100%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    display: flex;
-}
-
-.contact {
-    width: 60%;
-}
-
-.buttonBox{
-    width: 30%;
-    margin-top: -60px;
-    display: flex;
-}
-
-button{
-    border: 2px dashed black;
-    background-color: #533B0C;
-    width: 100%;
-    height: 50px;
-    font-family: 'Lobster', cursive;
-    font-size: 2.3rem;
-    border-radius: 15px;
-    box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.69);
-}
-
-.mission {
-    margin-top: 125px;
-    margin-left: 100px;
-}
-
-button:hover {
-    cursor: pointer;
-    color: #C7D035;
-}
-
-body {
     margin: 0;
     height: 100%;
-}
-
-.teamRow {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-}
-
-.team1 {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.69); 
-}
-
-.teamM1 {display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    margin: 100px 100px 100px 100px;
-}
-
-.teamBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-}
-
-.teambtn {
-  width: 125px;
-  height: 50px;
-}
-
-.floating:hover {
-    background:  rgb(116, 83, 17);
-    cursor: pointer;
-}
-
-.floating{
-    animation-name: floating;
-    animation-duration: 1.5s;   
-    animation-iteration-count: infinite;
-}
-
-@keyframes floating {
-  0% {
-      transform: translateY(0%);  
   }
-  50% {
-      transform: translateY(8%);  
-  }   
-  100% {
-      transform: translateY(0%);
-  }  
   
-}
   
-.floating2:hover {
-  background:  rgb(116, 83, 17);
-  cursor: pointer;
-}
+// COLORS /////////////////////////////////////////////////////////////////////////////////////////////////
 
-.floating2 {
-  animation-name: floating2;
-  animation-delay: 0.75s;
-  animation-duration: 1.5s;   
-  animation-iteration-count: infinite;
-}
+@lightHoney: #C7D035;
+@honey: #CB8C07;
+@darkHoney: #533B0C;
+@goldenHoney: #c38c29;
+@darkHoney: #d09835;
+@darkHoney: #dea340;
+@darkHoney: #ebaf4c;
+@darkHoney: #f8bb58;
+@darkHoney: #ffc763;
+@darkHoney: #ffd36f;
 
-@keyframes floating2 {
-0% {
-    transform: translateY(0%);  
-}
-50% {
-    transform: translateY(8%);  
-}   
-100% {
-    transform: translateY(0%);
-}  
 
-}
+// LESS IMPORT FILES //////////////////////////////////////////////////////////////////////////////////////
+ 
+@import 'less/main.less';
+@import 'less/navigation.less';
+@import 'less/button.less';
+@import 'less/images.less';
 
-  @media(max-width:500px) {
+// PHONE SCALE /////////////////////////////////////////////////////////////////////////////////////////////
+
+@media(max-width:500px) {
     
-    .container{
-      width: 90%;
-      max-width: 400px;
-      margin-top: 40px;
-    }
-
     body {
-      padding: 5%;
-    }
-    
-    h1 {
-        font-size: 2.5rem;
-        margin-top: 20px;
-    }
+        padding: 5%;
+      }
 
-    p {
-        font-size: 1.6rem;
-    }
-    
-    nav {
-        padding: 10px;
-    }
-
-    a {
-        font-size: 1.5rem; 
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    
-    .beeIcon:hover {
-        width: 6rem;
-        height: 6rem;
-        border-radius: 30%;
-    }
-    
-    .topImg {
-          height: 250px;
-          margin-bottom: 110px;
-          display: none;
-          
-    }
-    
-    .wideImg {
-          height: 100%;
-    }
-    
-    .img1, .img2, .img3, .img4 {
-          width: 100%;
-          height: 100%;
-          margin: 0px;
-    }
-    
-    .topContent {
-        flex-direction: column;
-        margin-bottom: 30px; 
-    }
-    
-    .middleContent {
-        flex-direction: column-reverse;  
-    }
-      
-    .bottomContent {
-        flex-direction: column;  
-    }
-  
-    .contact {
-        width: 0%;
-    }
-    
-    .buttonBox {
-        width: 100%;
-    }
-    
-    button {
-        border: 2px dashed black;
-        height: 70px;
-    }
-
-    .mission {
-        margin-top: 0px;
-        margin-left: 0px;
-    }
-  
-    .teamRow {
-        flex-direction: column;
-    }
-    .teamM1 {
-      margin: 50px 0px 50px 0px;
-    }
-
-    .teambtn {
-      width: 100px;
-      height: 50px;
-    }
-    
-  }
+}
