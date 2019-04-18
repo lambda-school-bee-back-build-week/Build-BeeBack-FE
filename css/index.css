@@ -151,6 +151,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+form {
+  height: 60px;
+}
 h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -304,6 +307,7 @@ a:hover {
   z-index: 999;
   padding: 15px;
   border: 2px solid #000000;
+  border-top: none;
   background: #745311;
   color: #C7D035;
   font-size: 16px;

@@ -70,5 +70,10 @@ beeInfo.forEach (element => {
       element.style.marginTop = '0px';
 });
 
+let hoverShadow = document.querySelectorAll("form");
+hoverShadow.forEach (element => {
+      element.style.borderRadius = '15px';
+});
+
 
 

@@ -32,3 +32,8 @@ beeInfo.forEach (element => {
       element.style.boxShadow = '0px 0px 5px 5px rgb(56, 34, 6)';
       element.style.marginTop = '0px';
 });
+
+let hoverShadow = document.querySelectorAll("form");
+hoverShadow.forEach (element => {
+      element.style.borderRadius = '15px';
+});
