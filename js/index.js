@@ -57,6 +57,8 @@ toggleContent() {
 let dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));
 
 
+// MANIPULATION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 let navA = document.querySelectorAll("a");
 navA.forEach (element => {
       element.style.background = 'rgb(116, 83, 17)';

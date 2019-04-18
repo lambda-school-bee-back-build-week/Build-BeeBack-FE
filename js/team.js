@@ -1,3 +1,5 @@
+// BEE FACTS DROP DOWN ///////////////////////////////////////////////////////////////////////////////////////////////    
+
 class Dropdown {
     constructor(element) {
       this.element = element;
@@ -20,6 +22,9 @@ const drop = document.querySelector('.dropdown-content');
 
 let dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));
 
+
+// MANIPULATION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 let navA = document.querySelectorAll("a");
 navA.forEach (element => {
       element.style.background = 'rgb(116, 83, 17)';
@@ -37,3 +42,17 @@ let hoverShadow = document.querySelectorAll("form");
 hoverShadow.forEach (element => {
       element.style.borderRadius = '15px';
 });
+
+
+// BEE ICON GROW ON HOVER //////////////////////////////////////////////////////////////////////////////////////////////
+
+const beeIcon = document.querySelector(".beeIcon");
+
+beeIcon.addEventListener("mouseover", function( event ) {   
+    event.target.style.width = "6rem";
+    event.target.style.height = "6.5rem";
+  setTimeout(function() {
+      event.target.style.width = "";
+      event.target.style.height = "";
+      }, 500);
+    }, false);

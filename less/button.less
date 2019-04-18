@@ -9,13 +9,13 @@
 
 button{
     border: 2px dashed black;
-    background:  rgb(116, 83, 17);
+    background:  @buttonBack;
     width: 100%;
     height: 50px;
     font-family: 'Lobster', cursive;
     font-size: 2.3rem;
     border-radius: 15px;
-    box-shadow: 0px 0px 10px 7px rgb(56, 34, 6); 
+    box-shadow: 0px 0px 10px 7px @shadow; 
 }
 
 .mission {
@@ -25,7 +25,7 @@ button{
 
 button:hover {
     cursor: pointer;
-    color: #C7D035;
+    color: @buttonText;
 }
 
 
@@ -38,7 +38,7 @@ button:hover {
 // BUTTON ANIMATION ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   .floating:hover {
-      background:  rgb(116, 83, 17);
+      background:  @buttonBack;
       cursor: pointer;
   }
   
@@ -62,7 +62,7 @@ button:hover {
   }
     
   .floating2:hover {
-    background:  rgb(116, 83, 17);
+    background:  @buttonBack;
     cursor: pointer;
   }
   
@@ -87,6 +87,8 @@ button:hover {
   }
 
 
+// PHONE SCALE ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   @media(max-width:500px) {
 
     .buttonBox {
@@ -109,6 +111,9 @@ button:hover {
       }
       
 }
+
+
+// TABLET SCALE ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media(max-width:800px) {
     

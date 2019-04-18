@@ -1,3 +1,6 @@
+// START CSS ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
  abbr, acronym, address, big, cite, code, del, dfn,em, img, ins, kbd, q, s, samp, small, strike,
 strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
@@ -48,8 +51,8 @@ table {
 html {
   font-size: 62.5%;
 //   background: linear-gradient(to bottom, #533B0C 0%, #CB8C07 88%, #C7D035 100%);
-background-color: #44300a;
-background-image: linear-gradient(180deg, #44300a 4%, #513e0a 24%, #806114 48%, #a58523 85%, #d0ba6a 100%);
+background-color: @darkHoney;
+background-image: linear-gradient(180deg, @darkHoney 4%, @deepHoney 24%, @goldHoney 48%, @mellowHoney 85%, @lightHoney 100%);
 }
 
 html, body {
@@ -76,6 +79,7 @@ body {
 @mellowHoney: #a58523;
 @lightHoney: #d0ba6a;
 @buttonBack: rgb(116, 83, 17);
+@shadow: rgb(56, 34, 6);
 
 
 
@@ -86,6 +90,7 @@ body {
 @import 'less/button.less';
 @import 'less/images.less';
 
+
 // PHONE SCALE /////////////////////////////////////////////////////////////////////////////////////////////
 
 @media(max-width:500px) {
@@ -95,6 +100,9 @@ body {
       }
 
 }
+
+
+// TABLET SCALE ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media(max-width:800px) {
     
