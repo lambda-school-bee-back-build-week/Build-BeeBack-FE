@@ -3,27 +3,80 @@ import axios from "axios";
 import createPlotlyComponent from 'react-plotlyjs';
 import Plotly from 'plotly.js-geo-dist';
 const PlotlyComponent = createPlotlyComponent(Plotly);
+const us_state_dict = {
+  'AL': 0,
+  'AZ': 1,
+  'CA': 2,
+  'CO': 3,
+  'FL': 4,
+  'KY': 5,
+  'GA': 6,
+  'ID': 7,
+  'IL': 8,
+  'IN': 9,
+  'IA': 10,
+  'KS': 11,
+  'LA': 12,
+  'ME': 13,
+  'MD': 14,
+  'MI': 15,
+  'MN': 16,
+  'MS': 17,
+  'MO': 18,
+  'MT': 19,
+  'NE': 20,
+  'NV': 21,
+  'NJ': 22,
+  'NM': 23,
+  'NY': 24,
+  'NC': 25,
+  'ND': 26,
+  'OH': 27,
+  'OK': 28,
+  'OR': 29,
+  'SC': 30,
+  'SD': 31,
+  'TN': 32,
+  'TX': 33,
+  'UT': 34,
+  'VT': 35,
+  'VA': 36,
+  'WA': 37,
+  'WV': 38,
+  'WI': 39,
+  'WY': 40
+}
 
 const unpack = (rows, key) => {
   return rows.map((row) => row[key]);
 }
 
+
 class Main extends React.Component {
   state = {
-    data: []
+    data: [],
+    state_charting: undefined,
+    us_state: 'AL'
   }
+
   componentDidMount() {
-    axios.get('https://beeback.herokuapp.com/api/neonic2/2016').then(res => this.setState({ data: [...res.data] })).catch(err => console.error(err));
+    axios.get('https://beeback.herokuapp.com/api/neonic2/2016')
+      .then(res => this.setState({ data: [...res.data] })).catch(err => console.error(err));
+    axios.get('https://beeback.herokuapp.com/api/state-charting')
+      .then(res => this.setState({ state_charting: res.data })).catch(err => console.error(err));
   }
   render() {
-    console.log(this.state);
+    if (this.state.state_charting !== undefined) {
+      console.log(this.state.state_charting[us_state_dict['AL']].id_);
+    }
+    else return <div></div>
     return (
       <section className="main">
         <div>
           <PlotlyComponent
             onClick={data => {
 
-              console.log(data.points[0].text);
+              console.log(data.points[0]);
             }}
             data={[{
               type: 'choropleth',
