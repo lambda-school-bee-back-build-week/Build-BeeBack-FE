@@ -346,6 +346,9 @@ a:hover {
   background-color: #745311;
 }
 @media (max-width: 500px) {
+  header {
+    margin-bottom: 70px;
+  }
   nav {
     padding: 10px;
   }
