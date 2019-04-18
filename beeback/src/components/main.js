@@ -56,7 +56,8 @@ class Main extends React.Component {
   state = {
     data: [],
     state_charting: undefined,
-    us_state: 'AL'
+    us_state: 'AL',
+    state_chart: undefined
   }
 
   componentDidMount() {
@@ -75,8 +76,20 @@ class Main extends React.Component {
         <div>
           <PlotlyComponent
             onClick={data => {
+              let chart = this.state.state_charting[us_state_dict[data.points[0].text]]
+              const us_state = chart.id_
+              const X = JSON.parse(chart.X)
+              const yb = JSON.parse(chart.yb)
+              const yl = JSON.parse(chart.yl).flat()
+              this.setState({
+                state_chart: {X, yb, yl},
+                us_state
+              },
+              () => {
+                console.log(this.state.state_chart)
+            });
 
-              console.log(data.points[0]);
+              console.log(data.points[0].text);
             }}
             data={[{
               type: 'choropleth',
