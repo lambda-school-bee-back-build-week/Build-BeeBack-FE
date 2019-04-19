@@ -32,9 +32,9 @@ class App extends Component {
         <div className ="navbar">
         <Navbar>
           <Link style={{ textDecoration: 'none' }}to = "/"><Links> Login </Links></Link>
-          {/* <Link style={{ textDecoration: 'none' }}to = '/registerpage'><Links> Register </Links></Link> */}
-          <Link style={{ textDecoration: 'none' }}to = "/main"><Links> Main </Links></Link>
-          <Link style={{ textDecoration: 'none' }}to = '/update'><Links> Edit Profile </Links></Link>
+          
+          <Link style={{ textDecoration: 'none' }}to = "/main"><Links> Data </Links></Link>
+          {/* <Link style={{ textDecoration: 'none' }}to = '/update'><Links> Edit Profile </Links></Link> */}
 
         </Navbar>
         </div>

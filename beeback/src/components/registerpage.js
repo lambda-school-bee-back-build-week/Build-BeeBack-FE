@@ -34,9 +34,9 @@ background-color: none;
 text-align:center;
 margin:20px;
 width: 300px;
-padding: 20px;
+padding: 10px;
 outline: none;
-font-size: 20px;
+font-size: 15px;
 
 `
 const Button = styled.button`
@@ -47,6 +47,11 @@ color: black;
 font-size: 24px;
 border-radius: 10px;
 `
+const Title = styled.h1`
+text-align: center;
+margin-bottom: 50px;
+`
+;
 
  class Registerpage extends Component {
      state = {
@@ -77,7 +82,7 @@ border-radius: 10px;
           
         <div classNam ="registerpage">
       <Regbox>
-          <h1> Register </h1>
+          <Title> Register </Title>
 
         <form onSubmit ={this.handleSubmit}>
         <RegInput>

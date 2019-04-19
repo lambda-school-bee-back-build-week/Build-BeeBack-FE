@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-
-import {connect} from 'react-redux'
 import createPlotlyComponent from 'react-plotlyjs';
 
 import Plotly from 'plotly.js/dist/plotly-cartesian';
