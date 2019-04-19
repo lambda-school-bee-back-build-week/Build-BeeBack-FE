@@ -5,7 +5,7 @@ beeImage.addEventListener('mouseover', (e) => {
     e.target.style.backgroundColor = 'tan';
     
 })
-console.warn(beeImage);
+//console.warn(beeImage);
 
 
 const button = document.querySelectorAll(".button");
