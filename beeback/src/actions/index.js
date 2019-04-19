@@ -12,6 +12,62 @@ export const LOGIN_FAILURE = 'LOGIN_FAILURE'
 export const REGISTER_START = 'REGISTER_START'
 export const REGISTER_SUCCESS = 'REGISTER_SUCESS'
 export const REGISTER_FAILURE= 'REGISTER_START'
+export const UPDATE_START = 'UPDATE_START'
+export const UPDATE_SUCCESS = "UPDATE_SUCCESS"
+export const UPDATE_FAILURE= "UPDATE_FAIL"
+export const DELETE_START = "DELETE_START"
+export const DELETE_SUCCESS = "DELETE_SUCCESS"
+export const DELETE_FAILURE = "DELETE_FAIL"
+
+
+
+
+export const Delete = (userID) => dispatch =>{
+    dispatch({type: DELETE_START})
+    axios.delete(
+        `https://beeback.herokuapp.com/api/user/${userID}`,
+        {headers: {authorization:localStorage.getItem('token')}}
+        
+    )
+    .then( res => {
+
+        dispatch({
+            type: DELETE_SUCCESS,
+            payload: res.data
+        })
+
+    })
+    .catch(err =>{
+        dispatch({
+            type: DELETE_FAILURE,
+            payload: err
+        })
+    })
+}
+
+export const Update = (userID) => dispatch =>{
+    dispatch({type: UPDATE_START})
+    axios.get(
+        `https://beeback.herokuapp.com/api/user/${userID}`,
+        {headers: {authorization:localStorage.getItem('token')}}
+        
+    )
+    .then( res => {
+
+        dispatch({
+            type: UPDATE_START,
+            payload: res.data
+        })
+
+    })
+    .catch(err =>{
+        dispatch({
+            type: UPDATE_FAILURE,
+            payload: err
+        })
+    })
+}
+
 
 
 
