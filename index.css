@@ -1,0 +1,307 @@
+ /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+ }
+
+ /* HTML5 display-role reset for older browsers */
+
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+     display: block;
+ }
+
+ * {
+     box-sizing: border-box;
+ }
+
+ body {
+     line-height: 1;
+ }
+
+ ol, ul {
+     list-style: none;
+ }
+
+ blockquote, q {
+     quotes: none;
+ }
+
+ blockquote:before, blockquote:after, q:before, q:after {
+     content: '';
+     content: none;
+ }
+
+ table {
+     border-collapse: collapse;
+     border-spacing: 0;
+ }
+
+ /* MY CSS */
+
+ .page-container {
+     max-width: 1000px;
+     margin: auto;
+ }
+
+ header {
+     background-color: bisque;
+ }
+
+ p {
+     font-family: Raleway;
+     line-height: 1.5em;
+     font-size: 1em;
+     color: rgb(114, 65, 1);
+ }
+
+ .h1-container {
+     display: flex;
+ }
+
+ h1 {
+     color: rgb(255, 166, 0);
+     font-family: lobster, cursive;
+     font-size: 100px;
+     text-align: center;
+     padding: 40px;
+ }
+
+ .header-container {
+     display: flex;
+     justify-content: center;
+     padding: 2px;
+ }
+
+ .header-container img {
+     border-radius: 50%;
+     border: dashed;
+     border-color: rgb(255, 166, 0);
+     float: right;
+     margin: 30px 40px;
+     padding: 10px;
+ }
+
+ nav {
+     text-align: center;
+     background-color: rgb(243, 147, 22);
+     padding: 20px;
+     font-family: Raleway;
+ }
+
+ a {
+     color: white;
+     font-size: 18px;
+     padding: 10px;
+     text-decoration: none;
+ }
+
+ a:hover {
+     color: rgb(255, 189, 9);
+ }
+
+ .middle-content h2 {
+     font-size: 20px;
+     font-family: lobster;
+     padding: 10px;
+     text-align: center;
+     color: rgb(114, 65, 1);
+     padding: 30px 10px 10px 10px;
+ }
+
+ .middle-content {
+     background-color: whitesmoke;
+ }
+
+ .middle-content p {
+     padding: 20px;
+ }
+
+ .bottom-content-container {
+     display: flex;
+     justify-content: flex-start;
+ }
+
+ .bottom-img-container {
+     display: flex;
+     align-items: center;
+ }
+
+ .bottom-content-container h2 {
+     font-size: 20px;
+     font-family: lobster;
+     padding: 10px;
+     text-align: center;
+ }
+
+ .bottom-content-container {
+     padding: 20px;
+     align-items: center;
+     background-color: chocolate;
+ }
+
+ .bottom-content-text {
+     flex-direction: column;
+     color: whitesmoke;
+     font-size: 18px;
+     font-family: Raleway;
+     align-content: center;
+     padding: 20px;
+     line-height: 1.5em;
+ }
+
+ .bottom-content-text p {
+     color: whitesmoke;
+ }
+
+ .bottom-content-container img {
+     border-radius: 25%;
+ }
+
+ .solution-list {
+     padding-left: 2em;
+     list-style-type: disc;
+ }
+
+ .button {
+     font-family: lobster;
+     background-color: bisque;
+     color: rgb(243, 147, 22);
+     width: 25%;
+     height: 50px;
+     font-size: 2rem;
+     margin-top: 50px;
+     border-radius: 25%;
+     align-items: center;
+     border: dashed;
+     border-color: rgb(243, 147, 22);
+     text-align: center;
+     margin-bottom: 1.5em;
+ }
+
+ .button:hover {
+     opacity: .85;
+     cursor: pointer;
+ }
+
+ .button:focus {
+     outline: none;
+ }
+
+ .button-box-class {
+     align-items: center;
+     text-align: center;
+     background-color: chocolate;
+ }
+
+ .list-container {
+     background-color: bisque;
+     display: flex;
+     padding: 15px;
+ }
+
+ .list-container h2 {
+    font-size: 20px;
+    font-family: lobster;
+    padding: 10px;
+    color: rgb(114, 65, 1);
+    text-align: center;
+    
+
+ }
+
+ .list-container img {
+    border-radius: 25%;
+    margin: 10px;
+    
+
+ }
+
+ .plant-style {
+    font-family: Raleway;
+    line-height: 1.5em;
+    font-size: 1em;
+    color: rgb(114, 65, 1);
+    padding-bottom: 20px;
+    padding-left: 20px;
+    justify-content: center;
+    margin: 5px;
+    text-align: left;
+
+ }
+
+ /* Mobile */
+
+ @media only screen and (max-width: 500px) {
+     body {
+         background-color: chocolate;
+     }
+     .header-container {
+         flex-direction: column-reverse;
+     }
+     .header-container img {
+         width: 100%;
+         height: auto;
+         margin: 0%;
+         padding: 0%;
+     }
+     .bottom-content-container {
+         flex-direction: column;
+         flex-direction: column-reverse;
+         align-items: center;
+         font-family: Raleway;
+     }
+     .bottom-content-text {
+         font-family: Raleway;
+     }
+     p {
+         color: white;
+         background-color: chocolate;
+     }
+     .button {
+         width: 75%;
+         height: 80px;
+         margin: 5px;
+     }
+
+     .list-container {
+        flex-direction: column;
+
+     }
+     .plant-style li {
+        margin-bottom: 10px;
+        
+     }
+     .list-container img {
+         width: 100%;
+         align-self: center;
+     }
+ }
+
+ /*Tablet */
+
+ @media only screen and (min-width: 800px) {
+    .middle-content {
+        background-color: bisque;
+    }
+    .list-container {
+        flex-direction: column-reverse;
+        align-content: center;
+        align-items: center;
+    }
+
+    .list-container img {
+        width: 600px;
+    }
+
+    .plant-style {
+        font-size: 18px;
+    }
+}
