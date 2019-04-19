@@ -3,7 +3,16 @@ import axios from "axios";
 import createPlotlyComponent from "react-plotlyjs";
 import Plotly from "plotly.js-geo-dist";
 import Lineplot from "./lineplot";
+import styled from "styled-components"
 const PlotlyComponent = createPlotlyComponent(Plotly);
+
+
+const Graphs = styled.div`
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items: center;
+`;
 
 const unpack = (rows, key) => {
   return rows.map(row => row[key]);
@@ -79,7 +88,7 @@ class ChoroplethMap extends React.Component {
 
     return (
       <section className="main">
-        <div>
+        <Graphs>
           <PlotlyComponent
             onClick={data => {
               let chart = this.state.state_charting[
@@ -144,9 +153,10 @@ class ChoroplethMap extends React.Component {
               X={this.state.state_chart.X}
               y={this.state.state_chart.yl}
               yb={this.state.state_chart.yb}
+              
             />
           )}
-        </div>
+        </Graphs>
       </section>
     );
   }

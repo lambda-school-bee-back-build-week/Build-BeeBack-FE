@@ -1,6 +1,66 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {loginSuccess} from '../actions/index'
+import styled from 'styled-components'
+import {Link} from 'react-router-dom'
+
+
+const Loginbox = styled.div`
+
+display: flex;
+justify-content: center;
+flex-direction:column;
+align-items:center;
+height: 400px;
+width: 500px;
+margin: 0 auto;
+border-radius: 20px;
+-webkit-box-shadow: 10px 10px 23px 0px rgba(140,127,140,1);
+-moz-box-shadow: 10px 10px 23px 0px rgba(140,127,140,1);
+box-shadow: 10px 10px 23px 0px rgba(140,127,140,1);
+`
+const LoginInput = styled.div`
+display: flex;
+justify-content: center;
+flex-direction:column;
+align-items:center;
+height: 200px;
+/* margin-bottom: 200px; */
+`
+const InputField = styled.input`
+border: none;
+border-bottom: 1px solid black;
+background-color: none;
+text-align:center;
+margin:20px;
+width: 300px;
+padding: 5px;
+outline: none;
+font-size: 24px;
+
+`
+const Title = styled.h1`
+text-align: center;
+;
+`
+const SubTitle = styled.h1`
+text-align: center;
+;
+`
+const Links = styled.h3`
+  padding: px;
+  text-decoration: none;
+  color: black;
+`;
+const Button = styled.button`
+background-color: goldenrod;
+width: 300px;
+padding: 10px;
+color: black;
+font-size: 24px;
+border-radius: 10px;
+outline: none;
+`
 
 
  class Loginpage extends Component {
@@ -22,31 +82,32 @@ import {loginSuccess} from '../actions/index'
      handleSubmit = (e) =>{
          e.preventDefault();
         this.props.loginSuccess(this.state.creds)
-        
      }
 
   render() {
-    //   if(this.props.isloggedin){
-    //     this.props.history.push("/friendlist")
-    //   }
+      if(this.props.isloggedin){
+        this.props.history.push("/main")
+      }
     
     // console.log(this.props.loggedin, this.props.isfetching)
     return (
         
-      <div>
+      <div className = "loginPage" >
+        <Title>We'll Bee Back</Title>
+        <Loginbox>
           
-
-
-          <h1> Login Page </h1>
+         
         <form onSubmit ={this.handleSubmit}>
-        <input onChange = {this.handlechange}
+        <SubTitle> Login </SubTitle>
+        <LoginInput> 
+        <InputField onChange = {this.handlechange}
         type ="text"
         placeholder ='username'
         name = "username"
         value = {this.state.username}
         
         />
-        <input onChange = {this.handlechange}
+        <InputField onChange = {this.handlechange}
         type ="password"
         placeholder ='password'
         name = "password"
@@ -54,19 +115,24 @@ import {loginSuccess} from '../actions/index'
         
         />
 
-        <button value ="submit">submit</button>
+        <Button value ="submit">Login</Button>
+        <Link style={{ textDecoration: 'none' }}to = '/registerpage'><Links> Register </Links></Link>
+        </LoginInput>
+
 
 
         
 
         </form>
+        
+        </Loginbox>
       </div>
     )
   }
 }
  const mapStateToProps = state =>({
-    //   isloggedin:state.loggingIn,
-    //   isfetching:state.isfetching
+      isloggedin:state.loggingIn,
+      
  })
 
 export default connect (

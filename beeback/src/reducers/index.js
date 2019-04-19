@@ -7,7 +7,13 @@ import {
     LOGIN_FAILURE,
     REGISTER_START,
     REGISTER_SUCCESS,
-    REGISTER_FAILURE
+    REGISTER_FAILURE,
+    UPDATE_START,
+    UPDATE_SUCCESS,
+    UPDATE_FAILURE,
+    DELETE_START,
+    DELETE_SUCCESS,
+    DELETE_FAILURE
 
     
 
@@ -21,26 +27,58 @@ const initialstate ={
         data: [],
         loggingIn: false,
         isfetching:false,
-        error: null
+        error: '',
+        isupdated:false,
+        isdeleted:false,
       
 };
 
 export const rootReducer = (state = initialstate, action) =>{
     
     switch (action.type){
-        // case FETCH_FRIENDS_START:
-        // return{
-        //   ...state,
-        //   err: '',
-        //   fetchingFriends: true
-        // }
-        // case FETCH_FRIENDS_SUCCESS:
-        // return{
-        //   ...state,
-        //   err: '',
-        //   isfetching: false,
-        //   friend: action.payload
-        // }
+        case UPDATE_START:
+        return{
+            ...state,
+            fetchingdata:true
+            
+            
+
+        }
+        case UPDATE_SUCCESS:
+        return{
+            ...state,
+            fetchingdata: false,
+            isupdated: true
+            
+        }
+        case UPDATE_FAILURE:
+        return{
+            ...state,
+            fetchingdata: false,
+            isupdated: false
+            
+        }
+        case DELETE_START:
+        return{
+            ...state,
+            fetchingdata:true,
+            isdeleted:false
+            
+        }
+        case DELETE_SUCCESS:
+        return{
+            ...state,
+            fetchingdata:false,
+            isdeleted:true
+            
+        }
+        case DELETE_FAILURE:
+        return{
+            ...state,
+            fetchingdata:false,
+            isdeleted:false
+            
+        }
          case LOGIN_FETCHING:
          return{
              ...state,
@@ -58,7 +96,7 @@ export const rootReducer = (state = initialstate, action) =>{
              ...state,
              loggingIn:false,
              isfetching: false,
-             err: 'ooops'
+             err: action.payload
          }
 
          case REGISTER_START:
