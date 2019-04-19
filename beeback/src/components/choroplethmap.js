@@ -153,7 +153,7 @@ class ChoroplethMap extends React.Component {
               X={this.state.state_chart.X}
               y={this.state.state_chart.yl}
               yb={this.state.state_chart.yb}
-              
+              us_state = {this.state.us_state}
             />
           )}
         </Graphs>
