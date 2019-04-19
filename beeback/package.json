@@ -8,6 +8,7 @@
     "plotly.js-geo-dist": "^1.47.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-loader-spinner": "^2.3.0",
     "react-plotly.js": "^2.3.0",
     "react-plotlyjs": "^0.4.4",
     "react-redux": "^7.0.2",
@@ -15,7 +16,8 @@
     "react-scripts": "2.1.8",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
